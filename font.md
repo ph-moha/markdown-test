@@ -4,19 +4,52 @@
 # 2. 폰트 파일 로컬 서버에 업로드
 로컬 서버에 접근하여 원하는 폰트 파일을 웹사이트의 폴더 구조에 맞게 업로드합니다. 예를 들어, 프로젝트 폴더 내에 fonts 폴더를 만들어 그 안에 폰트 파일을 저장할 수 있습니다.
   ```
-    /your-project-directory
-        /fonts
-            custom-font.woff2
+  /your-project-directory
+      /fonts
+          /Roboto
+              Roboto-Thin.ttf
+              Roboto-Regular.ttf
+              Roboto-Bold.ttf
+              Roboto-Italic.ttf
+              Roboto-BoldItalic.ttf
   ```
 # 3. CSS 파일 수정
 CSS 파일에서 @font-face 규칙을 사용하여 업로드한 폰트를 정의합니다. 아래는 예시입니다.
+불러올 폰트가 많다면 하나하나 다 불러와야 한다. 
   ```css
     @font-face {
-        font-family: 'CustomFont';
-        src: url('/fonts/custom-font.woff2') format('woff2'),
-             url('/fonts/custom-font.woff') format('woff');
-        font-weight: normal;
+        font-family: "Roboto";
+        src: url('/fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+        font-weight: 100;  //- 100 thin 
         font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "Roboto";
+        src: url('/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+        font-weight: 400;  // - 400 regular
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "Roboto";
+        src: url('/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+        font-weight: 700; // - 700 bold
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "Roboto";
+        src: url('/fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic; // - 이태릭
+    }
+    
+    @font-face {
+        font-family: "Roboto";
+        src: url('/fonts/Roboto/Roboto-BoldItalic.ttf') format('truetype');
+        font-weight: 700;
+        font-style: italic; // - 이태릭
     }
     
     body {
