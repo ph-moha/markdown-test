@@ -19,6 +19,13 @@
 # 3. CSS 파일 수정
 CSS 파일에서 @font-face 규칙을 사용하여 업로드한 폰트를 정의합니다. 아래는 예시입니다. <br>
 불러올 폰트가 많다면 하나하나 다 불러와야 한다. <br>
+
+**css 리셋을 불러온 경우 **
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+```
+h1, h2, 등 하나하나 세팅을 다 해줘야 한다.
+
   ```css
     @font-face {
         font-family: "Roboto";
@@ -54,50 +61,44 @@ CSS 파일에서 @font-face 규칙을 사용하여 업로드한 폰트를 정의
         font-weight: 700;
         font-style: italic; // - 이태릭
     }
-    
-h1 {
-  font-weight: 700; /* 강조 폰트 굵기 설정 */
-}
-p {
-  font-weight: 400; /* 일반 폰트 굵기 설정 */
-}
-em {
-  font-style: italic; /* 이탤릭체 설정 */
-}
-body {
-    font-family: "Roboto", sans-serif;
-}
-
-h1 {
+  h1 {
+    font-size: 2em;
+    font-weight: 700; /* 강조 폰트 굵기 설정 */
+  }
+  h2 {
+    font-size: 1.5em;
     font-weight: 700;
-}
-
-p {
-    font-weight: 400;
-}
-
-em {
-    font-style: italic;
-}
-html {
-  --color-black: #0e111b;
-  --color-white: #fff;
-  --color-white-50: rgba(255, 255, 255, 0.5);
-  --color-white-30: rgba(255, 255, 255, 0.3);
-  --color-white-20: rgba(255, 255, 255, 0.2);
-  --color-white-10: rgba(255, 255, 255, 0.1);
-  --color-white-5: rgba(255, 255, 255, 0.05);
-  --color-primary: #fdc000;  
-  --color-hover: #f86a05;
-  --color-area: #1c212e;
-
-}
-body {
-  background-color: var(--color-black);
-  font-family: "Roboto", sans-serif;  
-  line-height: 1.4;
-  color: var(--color-white);
-}
+  }
+  h3 {
+    font-size: 1.17em;
+    font-weight: 700;
+  }
+  p {
+    font-weight: 400; /* 일반 폰트 굵기 설정 */
+  }
+  em {
+    font-style: italic; /* 이탤릭체 설정 */
+  }
+  
+  html {
+    --color-black: #0e111b;
+    --color-white: #fff;
+    --color-white-50: rgba(255, 255, 255, 0.5);
+    --color-white-30: rgba(255, 255, 255, 0.3);
+    --color-white-20: rgba(255, 255, 255, 0.2);
+    --color-white-10: rgba(255, 255, 255, 0.1);
+    --color-white-5: rgba(255, 255, 255, 0.05);
+    --color-primary: #fdc000;  
+    --color-hover: #f86a05;
+    --color-area: #1c212e;
+  
+  }
+  body {
+    background-color: var(--color-black);
+    font-family: "Roboto", sans-serif;  
+    line-height: 1.4;
+    color: var(--color-white);
+  }
 
   ```
 # 4. HTML 파일에서 폰트 사용
