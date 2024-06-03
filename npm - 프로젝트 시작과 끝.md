@@ -54,7 +54,7 @@ Repository name : 적기 > 공개 혹은 비공개 선택 하고 생성 > Quick 
 
 비주얼 스튜디오로 돌아오기
 
-**.gitignore** 파일 만들기
+## 6-1.gitignore 파일 만들기
 .parcel-cache, dist 폴더, node-modules 들은 업로드 할 필요가 없다.
 
 gitignore 파일에 업로드가 필요 없는 파일 적기
@@ -66,7 +66,7 @@ node-modules
 .vscode
 ```
 
-### git 에 배포 ###
+### 6-2 git 에 배포 ###
 
 ``` turminal
 git init   // 초기화
