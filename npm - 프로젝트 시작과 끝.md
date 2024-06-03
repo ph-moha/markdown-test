@@ -10,7 +10,7 @@ npm i -D parcel
   ```js
     "scripts": {
       "dev": "parcel ./index.html",
-      "build": "parcel buildxx  ./index.html"    
+      "build": "parcel build  ./index.html"    
     },
   ```
 
