@@ -10,7 +10,7 @@ npm i -D parcel
   ```js
     "scripts": {
       "dev": "parcel ./index.html",
-      "build": "parcel buidl ./index.html"    
+      "build": "parcel buildxx  ./index.html"    
     },
   ```
 
@@ -76,7 +76,12 @@ git init   // 초기화
 git add .  // 현재 위치 추가
 
 // 추가를 잘못 했을 경우 리셋후 다시 추가 하면 된다
-git reset 
+git reset
+
+    //파일을 잘못 올렸을 경우 로컬에서 삭제후 다시 push 하면 된다.
+    rm -r 잘못올린 파일, 폴더
+    git add . // 모두 올리기 스테이징에.
+    git add path/to/파일.xx // 파일 하나만 올리기
 
 git status  // 올릴 파일 한번 체크해 보기
 git commit -m "메시지 적기" 생략해도 된다.
@@ -87,14 +92,37 @@ git push origin main  // main 브랜치로 업로드,
     // git branch -m master main (마스터 브랜치를 main으로 이름 변경하는 방법. 이름 안 바꿔도 된다.)
     // 이름 바꿀거면 바꾼 후에 push 하면 된다.
 
-
-
 ```
 
+## 7 vercel 이용하기
 
+npm i -D vercel // 패키지 설치
 
+package.json 열고 
 
+"vercel": "vercel dev" 라고 스크립트에 적어 준다.
 
+  ```js
+
+    "scripts": {
+      "dev": "parcel ./index.html",
+      "build": "parcel build ./index.html",
+      "vercel": "vercel dev"  
+    },
+
+  ```
+
+./ package.json 자리에 vercel.json 파일도 만들어 준다.
+
+``` vercel
+{
+  "devCommand": "npm run dev",
+  "buildCommand": "npm run build"
+}
+```
+서버리스 함수를 이용해서 api 카를 감출 수 있다.
+
+npm run vercel 로 테스트 해 본다.
 
 
 
