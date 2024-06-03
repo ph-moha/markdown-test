@@ -1,0 +1,39 @@
+## css 에 @media 를 사용해서 가로사이즈 마다 값을 지정해 주자
+css 위에서 아래로 읽으면서 진행되기 때문에 @media의 위치는 해당태그의 아래에 두어야 한다.
+그러면 css를 덮어 쓰우는 느낌으로 진행된다.
+
+``` css
+///// 예제 ///// 
+@media (max-width: 600px) {
+  header {
+    padding: 14px 20px;
+  }
+  header nav {
+    display: none;
+  }
+  header .user {
+    right: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .the-movie {
+    gap: 30px;
+  }
+  .the-movie .poster {
+    --width: 300px;
+  }
+}
+@media (max-width: 720px) {
+  .the-movie {
+    display: block;
+  }
+  .the-movie .title {
+    font-size: 50px;
+    margin-top: 50px;
+    display: ;
+  }
+}
+
+
+```
