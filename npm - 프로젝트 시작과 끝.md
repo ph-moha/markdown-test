@@ -60,10 +60,13 @@ Repository name : 적기 > 공개 혹은 비공개 선택 하고 생성 > Quick 
 gitignore 파일에 업로드가 필요 없는 파일 적기
 ```
 parcel-cache
-dist
-node-modules
+dist/
+node_modules
 .DS_Store
 .vscode
+.env
+*.log
+
 ```
 
 ### 6-2 git 에 배포 ###
@@ -71,7 +74,13 @@ node-modules
 ``` turminal
 git init   // 초기화
 git add .  // 현재 위치 추가
+
+// 추가를 잘못 했을 경우 리셋후 다시 추가 하면 된다
+git reset 
+
 git status  // 올릴 파일 한번 체크해 보기
+git commit -m "메시지 적기" 생략해도 된다.
+
 git remote add origin "github에서 복사한 주소 붙여 넣기:"
 git remote add origin https://~~~
 git push origin main  // main 브랜치로 업로드,
